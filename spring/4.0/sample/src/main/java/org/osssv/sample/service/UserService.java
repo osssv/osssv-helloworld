@@ -3,6 +3,8 @@
  */
 package org.osssv.sample.service;
 
+import java.util.List;
+
 import org.osssv.sample.entity.User;
 
 /**
@@ -24,6 +26,14 @@ public interface UserService {
 	 * 
 	 */
 	User getUser(long userId);
+	
+	
+	/**
+	 * Get User List
+	 * 
+	 */
+	List<User> getUsers(String firstName, String lastName);
+
 	
 	/**
 	 * Validate PIN

@@ -3,6 +3,8 @@
  */
 package org.osssv.sample.repository;
 
+import java.util.List;
+
 import org.osssv.sample.entity.User;
 
 
@@ -27,5 +29,12 @@ public interface UserRepository {
 	 * 
 	 */
 	User getUser(long userId);
+
+	
+	/**
+	 * Search User data.
+	 * 
+	 */
+	List<User> search(String firstName, String lastName);
 
 }
