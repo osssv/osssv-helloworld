@@ -113,6 +113,7 @@ public class UserServiceImpl implements UserService {
 	 * 
 	 */
 	@Override
+	@Transactional
 	public List<User> getUsers(String firstName, String lastName) {
 		
 		List<User> returnList = new ArrayList<>();

@@ -10,7 +10,6 @@
 		<listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
 	</listener>
 
-	<!-- NOTE using custom version due to Spring4 and RESTEasy issue -->
 	<listener>
 		<listener-class>org.osssv.sample.util.CustomContextLoaderListener</listener-class>
 	</listener>
@@ -25,9 +24,14 @@
 		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
 	</servlet>
 
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/rest</param-value>
+	</context-param>
+
 	<servlet-mapping>
 		<servlet-name>Resteasy</servlet-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>
