@@ -1,3 +1,7 @@
+set tabstop=8
+set softtabstop=4
+set expandtab
+set shiftwidth=4
 set nocompatible
 filetype off
 
@@ -8,4 +12,4 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
-filetype plugin indent on
+
